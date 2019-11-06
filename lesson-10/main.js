@@ -25,5 +25,11 @@ let appData = {
   savings: false
 };
 
-alert("Ваш бюджет на один день = " + ((appData.budget/30)-
-  ((appData.expenses.payment+appData.expenses.payment1)/30)) +" рублей :)");
+let sum = ((appData.budget/30)-
+((appData.expenses.payment+appData.expenses.payment1)/30));
+
+if (sum >= 0) {
+  alert("Ваш бюджет на один день = " + sum +" рублей :)");
+} else {
+  alert("Поздравляем, вы бомж :)");
+}
