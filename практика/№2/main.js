@@ -1,3 +1,5 @@
+"use strict";
+
 let money = +prompt("Ваш бюджет на месяц?", ''),
 	time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
@@ -11,7 +13,7 @@ let appData = {
 };
 
 
-loop: for (let i = 1; i < 3; i++) {
+/* for (let i = 1; i < 3; i++) {
 	let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
 			b = +prompt("Во сколько обойдется?", '');
 	if ((typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null &&
@@ -20,14 +22,13 @@ loop: for (let i = 1; i < 3; i++) {
 		console.log("готово");
 	}	else {
 		// вернуться к вопросу заново
-		i=0;
-		continue loop;
+		i--;
 	}
-}
+} */
 
 /* let i = 1;
 
-loop: do {
+do {
 	i++;
 	let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
 			b = +prompt("Во сколько обойдется?", '');
@@ -37,15 +38,14 @@ loop: do {
 		console.log("готово");
 	}	else {
 		// вернуться к вопросу заново
-		i=1;
-		continue loop;
+		i--;
 	}
 } while (i < 3); */
 
 
-/* let i = 1;
+let i = 1;
 
-loop: while (i < 3) {
+while (i < 3) {
 	i++;
 	let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
 			b = +prompt("Во сколько обойдется?", '');
@@ -55,10 +55,9 @@ loop: while (i < 3) {
 		console.log("готово");
 	}	else {
 		// вернуться к вопросу заново
-		i=1;
-		continue loop;
+		i--;
 	}
-} */
+}
 
 	appData.moneyPerDay = appData.budget / 30;
 alert("Ваш бюджет на один день: " + appData.moneyPerDay);
