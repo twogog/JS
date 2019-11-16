@@ -104,13 +104,19 @@ window.addEventListener('DOMContentLoaded', function() {
 
     let modalbut = document.querySelectorAll('.description-btn');
 
-    for (let mod = 0; mod < modalbut.length; mod++) {
-        modalbut[mod].addEventListener('click', function() {
+    // for (let mod = 0; mod < modalbut.length; mod++) {
+    //     modalbut[mod].addEventListener('click', function() {
+    //         overlay.style.display = 'block';
+    //         this.classList.add('more-splash');
+    //         document.body.style.overflow = 'hidden';
+    //     });
+    // }
+    modalbut.forEach(function callback(currentValue, i) {
+        modalbut[i].addEventListener('click', function() {
             overlay.style.display = 'block';
-            this.classList.add('more-splash');
+            modalbut[i].classList.add('more-splash');
             document.body.style.overflow = 'hidden';
         });
-    }
-
+    });
 });
 
